@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Linktree Clone</title>
+</head>
+<body>
+    <header>
+        <!-- Header ohne Logo -->
+    </header>
+    <main>
+        <section class="links">
+            <div class="profile">
+                <h1>Hi, I'm <span>Dxvil</span></h1>
+                <p>YouTuber | TikToker</p> <!-- Text aktualisiert -->
+            </div>
+            <div class="link-buttons">
+                <a href="https://discord.gg/YAQxEJvZKX" class="link-btn" target="_blank">Zum Discord-Server</a>
+                <a href="https://www.roblox.com/users/815612842/profile" class="link-btn" target="_blank">Zu meinem Roblox-Profil</a>
+                <button class="link-btn" id="youtube-btn">YouTube-Kanäle</button>
+                <button class="link-btn" id="tiktok-btn">TikTok-Kanäle</button>
+            </div>
+            <div id="youtube-links" class="youtube-links">
+                <a href="https://www.youtube.com/@Dxvil_YT" class="youtube-btn" target="_blank">Dxvil</a>
+                <a href="https://www.youtube.com/@theonlyrealmono3582" class="youtube-btn" target="_blank">Big Monke</a>
+                <button class="back-btn" id="back-btn">-- Zurück --</button>
+            </div>
+            <div id="tiktok-links" class="tiktok-links">
+                <a href="https://www.tiktok.com/@dvxil_" class="tiktok-btn" target="_blank">Dxvil</a>
+                <button class="back-btn" id="back-tiktok-btn">-- Zurück --</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>Made by Theonlyrealmono®</p>
+    </footer>
+    <script>
+        // Event-Listener für YouTube-Kanäle Button
+        document.getElementById('youtube-btn').addEventListener('click', function() {
+            document.getElementById('youtube-links').style.display = 'flex';
+            document.querySelector('.link-buttons').style.display = 'none';
+            document.getElementById('tiktok-links').style.display = 'none';
+        });
+
+        // Event-Listener für TikTok-Kanäle Button
+        document.getElementById('tiktok-btn').addEventListener('click', function() {
+            document.getElementById('tiktok-links').style.display = 'flex';
+            document.querySelector('.link-buttons').style.display = 'none';
+            document.getElementById('youtube-links').style.display = 'none';
+        });
+
+        // Event-Listener für Zurück Button (YouTube)
+        document.getElementById('back-btn').addEventListener('click', function() {
+            document.getElementById('youtube-links').style.display = 'none';
+            document.querySelector('.link-buttons').style.display = 'flex';
+        });
+
+        // Event-Listener für Zurück Button (TikTok)
+        document.getElementById('back-tiktok-btn').addEventListener('click', function() {
+            document.getElementById('tiktok-links').style.display = 'none';
+            document.querySelector('.link-buttons').style.display = 'flex';
+        });
+    </script>
+</body>
+</html>
